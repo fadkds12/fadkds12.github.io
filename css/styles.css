@@ -52,8 +52,8 @@ header {
     .hidden-menu ul {
       background-color: black;
         list-style-type: none;
-        padding: 0;
-        margin: 0;
+        padding: 5px;
+        margin: 2.5rem;
         display: flex;
         top: 50px;
         position: relative;
@@ -92,9 +92,68 @@ main {
     padding: 20px;
 }
 
+card-container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    overflow-x: auto;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 300px;
+    margin-right: 20px;
+    position: relative;
+    transition: transform 0.2s;
+}
+
+.card:last-child {
+    /* Perubahan: Menghilangkan margin kanan pada kartu terakhir */
+    margin-right: 0;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card-content {
+    color: #333;
+    padding: 20px;
+    flex-grow: 1;
+
+.card h2 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.card p {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.card-shadow {
+    position: absolute;
+    top: 0;
+    right: -20px;
+    bottom: 0;
+    width: 20px;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.2), transparent);
+    pointer-events: none;
+}
+
 footer {
     opacity: 0;
-    transition: opacity 1s ease
+    transition: opacity 1s ease;
     text-align: center;
     background-color: #654321; /* Warna coklat tua */
     color: #fff;
