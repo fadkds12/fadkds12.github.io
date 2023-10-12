@@ -1,0 +1,64 @@
+/* Gaya umum */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffcc00; /* Warna kuning */
+    color: #333; /* Warna teks coklat gelap */
+    position: relative; /* Menjadikan posisi relatif untuk menempatkan waktu */
+}
+
+header {
+    background-color: #654321; /* Warna coklat tua */
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    background-color: #444;
+    text-align: center;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    text-align: center;
+    background-color: #654321; /* Warna coklat tua */
+    color: #fff;
+    padding: 10px;
+}
+
+/* Gaya Khusus untuk Waktu Real-Time */
+#real-time-clock {
+    position: absolute;
+    top: 10px; /* Jarak dari atas */
+    left: 10px; /* Jarak dari kiri */
+    background-color: #654321;
+    color: #fff;
+    padding: 5px 5px;
+    border-radius: 5px;
+    font-size: 10px;
+}
+
+/* Gaya Khusus untuk Halaman Tentang Kami (about.html) */
+.about-section {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Tambahkan gaya lain sesuai kebutuhan */

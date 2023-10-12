@@ -1,0 +1,115 @@
+/* Gaya umum */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffcc00; /* Warna kuning */
+    color: #333; /* Warna teks coklat gelap */
+}
+
+header {
+    background-color: #654321; /* Warna coklat tua */
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Tambahkan CSS berikut untuk mengatur menu responsif */
+#menu-button {
+    display: none; /* Sembunyikan tombol menu pada tampilan desktop */
+    position: relative;
+    z-index: 1000;
+}
+
+@media (max-width: 768px) {
+    #menu-button {
+        display: block; /* Tampilkan tombol menu pada tampilan mobile */
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .hidden-menu {
+        display: none; /* Sembunyikan menu ul pada tampilan mobile */
+        position: fixed;
+        top: 0px;
+        right: 0px;
+        height: 100%;
+        width: 33%;
+        background-color: black;
+        padding: 10px;
+        border-radius: 0px;
+        z-index: 999;
+        overflow-y: scroll;
+    }
+
+    .hidden-menu.show-menu {
+        display: block; /* Tampilkan menu ul saat tombol menu ditekan */
+    }
+
+    .hidden-menu ul {
+      background-color: black;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        top: 50px;
+        position: relative;
+        z-index: 1001;
+        flex-direction: column; /* Tampilkan item-menu secara vertikal */
+    }
+
+    .hidden-menu li {
+        margin-bottom: 10px;
+    }
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    background-color: #654321;
+    text-align: center;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+nav a:hover {
+  color: #ffcc00; /* Ganti warna saat hover */
+    transition: color 0.3s ease; /* Efek transisi */
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    opacity: 0;
+    transition: opacity 1s ease
+    text-align: center;
+    background-color: #654321; /* Warna coklat tua */
+    color: #fff;
+    padding: 10px;
+}
+
+/* Gaya Khusus untuk Waktu Real-Time */
+#real-time-clock {
+    position: absolute;
+    top: 10px; /* Jarak dari atas */
+    left: 10px; /* Jarak dari kiri */
+    background-color: #654321;
+    color: #fff;
+    padding: 5px 5px;
+    border: solid 2px yellow;
+    border-radius: 5px;
+    font-size: 10px;
+}
