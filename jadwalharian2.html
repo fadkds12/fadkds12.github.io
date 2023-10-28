@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jadwal Kegiatan Harian Minggu</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #2196F3;
+            color: black;
+        }
+
+        .container {
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .activity-list {
+            list-style: none;
+            position: flex;
+            padding: 1;
+        }
+
+        .activity-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .activity-text {
+            flex-grow: 1;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="text-center">Jadwal Kegiatan Harian Minggu</h2> <hr>
+        <form action="send_email.php" method="post">
+        <ul class="activity-list">
+            <li class="activity-item">
+                <input type="checkbox" class="form-check-input" id="activity1">
+                <label class="form-check-label activity-text" for="activity1">Bangun jam 4 pagi</label>
+            </li>
+            <li class="activity-item">
+                <input type="checkbox" class="form-check-input" id="activity2">
+                <label class="form-check-label activity-text" for="activity2">Sholat Shubuh</label>
+            </li>
+            <li class="activity-item">
+                <input type="checkbox" class="form-check-input" id="activity3">
+                <label class="form-check-label activity-text" for="activity3">Mandi Pagi</label>
+            </li>
+            <li class="activity-item">
+                <input type="checkbox" class="form-check-input" id="activity4">
+                <label class="form-check-label activity-text" for="activity4">Lari Pagi jam 5</label>
+            </li>
+            <li class="activity-item">
+                <input type="checkbox" class="form-check-input" id="activity5">
+                <label class="form-check-label activity-text" for="activity5">Sarapan</label>
+            </li>
+            <li class="activity-item">
+                <input type="checkbox" class="form-check-input" id="activity6">
+                <label class="form-check-label activity-text" for="activity6">Workout</label>
+            </li>
+            <li class "activity-item">
+                <input type="checkbox" class="form-check-input" id="activity7">
+                <label class="form-check-label activity-text" for="activity7">Belajar Senam Lantai</label>
+            </li>
+            <li class="activity-item">
+                <input type="checkbox" class="form-check-input" id="activity8">
+                <label class="form-check-label activity-text" for="activity8">Belajar Break Dance</label>
+            </li>
+            <li class="activity-item">
+                <input type="checkbox" class="form-check-input" id="activity9">
+                <label class="form-check-label activity-text" for="activity9">Sholat Dhuhr</label>
+            </li>
+            <li class="activity-item">
+                <input type="checkbox" class="form-check-input" id="activity10">
+                <label class="form-check-label activity-text" for="activity10">Makan Siang</label>
+            </li>
+            <li class="activity-item">
+                <input type="checkbox" class="form-check-input" id="activity11">
+                <label class="form-check-label activity-text" for="activity11">Bersih-bersih Rumah</label>
+            </li>
+            <li class="activity-item">
+                <input type="checkbox" class="form-check-input" id="activity12">
+                <label class="form-check-label activity-text" for="activity12">Sholat Ashar</label>
+            </li>
+            <li class="activity-item">
+                <input type="checkbox" class="form-check-input" id="activity13">
+                <label class="form-check-label activity-text" for="activity13">Mandi Sore</label>
+            </li>
+            <li class="activity-item">
+                <input type="checkbox" class="form-check-input" id="activity14">
+                <label class="form-check-label activity-text" for="activity14">Menjadwal Mata Pelajaran Besok Senin</label>
+            </li>
+            <li class="activity-item">
+                <input type="checkbox" class="form-check-input" id="activity15">
+                <label class="form-check-label activity-text" for="activity15">Sholat Maghrib</label>
+            </li>
+            <li class="activity-item">
+                <input type="checkbox" class="form-check-input" id="activity16">
+                <label class="form-check-label activity-text" for="activity16">Sholat Isya</label>
+            </li>
+            <li class="activity-item">
+                <input type="checkbox" class="form-check-input" id="activity17">
+                <label class="form-check-label activity-text" for="activity17">Makan Malam</label>
+            </li>
+            <li class="activity-item">
+                <input type="checkbox" class="form-check-input" id="activity18">
+                <label class="form-check-label activity-text" for="activity18">Belajar</label>
+            </li>
+            <li class="activity-item">
+                <input type="checkbox" class="form-check-input" id="activity19">
+                <label class="form-check-label activity-text" for="activity19">Sikat Gigi dan Mencuci Muka Sebelum Tidur</label>
+            </li>
+            <li class="activity-item">
+                <input type="checkbox" class="form-check-input" id="activity20">
+                <label class="form-check-label activity-text" for="activity20">Tidur (Tidak Boleh Lewat Jam 22:00)</label>
+            </li>
+        </ul>
+           <button type="submit" class="btn btn-primary">Kirim</button>
+</form>
+    </div>
+
+    <script>
+        // Fungsi untuk menandai kegiatan sebagai selesai
+        function toggleActivityDone(checkboxId) {
+            const checkbox = document.getElementById(checkboxId);
+            checkbox.checked = !checkbox.checked;
+        }
+
+        // Panggil fungsi ini dengan parameter ID checkbox ketika kegiatan selesai
+        toggleActivityDone("activity1");
+        toggleActivityDone("activity2");
+        toggleActivityDone("activity3");
+        toggleActivityDone("activity4");
+        toggleActivityDone("activity5");
+        toggleActivityDone("activity6");
+        toggleActivityDone("activity7");
+        toggleActivityDone("activity8");
+        toggleActivityDone("activity9");
